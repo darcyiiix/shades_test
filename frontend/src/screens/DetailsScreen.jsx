@@ -8,6 +8,7 @@ import { useCreateOrderMutation } from '../slices/ordersApiSlice';
 import { clearCartItems } from '../slices/cartSlice';
 import { toast } from 'react-toastify';
 import { useParams } from 'react-router-dom';
+import { MyApiClient } from '../my-api-client.js'
 import axios from 'axios';
 
 const DetailsScreen = () => {
@@ -41,7 +42,7 @@ const DetailsScreen = () => {
         }).unwrap();
         
         for(const item of cartItems){
-          const response = await axios.put(`/api/products/${item._id}/decrement`, {
+          const response = await MyApiClient.put(`/api/products/${item._id}/decrement`, {
             qty: item.qty // Assuming you decrement by 1 when adding to cart
             });
             console.log(response.data); // Log the response
