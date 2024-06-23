@@ -16,7 +16,7 @@ async function sendMail(email) {
     const mailOptions = {
         from: 'chillfrags98@gmail.com',
         to: email,
-        subject: 'Welcome to Pookie',
+        subject: 'Welcome to Shades by Woodpecker',
         text: 'Thank you for signing up, your account has been successfully created',
     };
 
