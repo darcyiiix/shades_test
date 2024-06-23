@@ -28,6 +28,7 @@ const ProductDetail = () => {
     const [comment, setComment] = useState('');
     const [showAlert, setShowAlert] = useState(false);
     const [selectedColor, setSelectedColor] = useState('');
+    const [selectedFinish, setSelectedFinish] = useState(product?.finishes[0]);
     const [selectedDimension, setSelectedDimension] = useState('');
 
 
@@ -79,7 +80,7 @@ const ProductDetail = () => {
     const addToCartHandler = async (selectedDimension) => {
 
         console.log(selectedDimension)
-        dispatch(addToCart({...product, price, qty, selectedDimension, selectedColor}));
+        dispatch(addToCart({...product, price, qty, selectedDimension, selectedColor, selectedFinish}));
         setShowAlert(true);
         setTimeout(() => setShowAlert(false), 3000);
     };
@@ -196,6 +197,21 @@ const ProductDetail = () => {
                         )}
                     </select>
                 }
+
+            {(product.finishes && product.finishes.length > 0) && 
+                    <select 
+                        onChange={(e) => setSelectedFinish(e.target.value)} 
+                        id="finish" 
+                        className="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:outline-none cursor-pointer block w-9/12 py-3 px-1 shadow-lg mb-2"
+                        value={selectedFinish}
+                    >
+                        {product.finishes.map((finish, index) => 
+                            <option key={index} value={finish}>{finish}</option>
+                        )}
+                    </select>
+              }
+
+            
 </form>
 
                     <span className={`${product.countInStock > 0 ? 'text-primary' : 'text-red-400'} -mt-4`}>{ product.countInStock > 0 ? 'In stock' : 'Out of stock' }</span>
@@ -244,7 +260,7 @@ const ProductDetail = () => {
                                 <p className='text-lg mb-4'>{review.comment}</p>
 
                                 <div className='flex items-center gap-x-3'>
-                                    <img className='h-6 w-7 rounded-3xl' src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D            ' />
+
                                     <span className='underline'>{review.name}</span>
                                     <p className='text-xs self-end'>{review.createdAt.substring(0, 10)}</p>
                                 </div>

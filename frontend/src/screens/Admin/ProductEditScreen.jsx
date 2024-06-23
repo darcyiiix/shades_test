@@ -43,6 +43,10 @@ const ProductEditScreen = () => {
     const [diameter, setDiameter] = useState('');
     const [height, setHeight] = useState('');
     const [dimPrice, setDimPrice] = useState('');
+    const [colors, setColors] = useState([]);
+    const [color, setColor] = useState('');
+    const [finishes, setFinishes] = useState([]);
+    const [finish, setFinish] = useState('');
 
     console.log(dimension)
     const {
@@ -81,6 +85,32 @@ const ProductEditScreen = () => {
         }
     };
 
+    const handleAddColor = () => {
+        if (color.trim() !== '') {
+            setColors([...colors, color.trim()]);
+            setColor('');
+        }
+    };
+
+    const handleRemoveColor = (index) => {
+        const newColors = [...colors];
+        newColors.splice(index, 1);
+        setColors(newColors);
+    };
+
+    const handleAddFinish = () => {
+        if (finish.trim() !== '') {
+            setFinishes([...finishes, finish.trim()]);
+            setFinish('');
+        }
+    };
+
+    const handleRemoveFinish = (index) => {
+        const newFinishes = [...finishes];
+        newFinishes.splice(index, 1);
+        setFinishes(newFinishes);
+    };
+
     const submitHandler = async (e) => {
         e.preventDefault();
 
@@ -94,6 +124,8 @@ const ProductEditScreen = () => {
             countInStock,
             description,
             dimension,
+            colors,
+            finishes,
         };
 
         const result = await updateProduct(updatedProduct);
@@ -121,6 +153,9 @@ const ProductEditScreen = () => {
           setCategory(product.category);
           setCountInStock(product.countInStock);
           setDescription(product.description);
+          setDimension(product.dimension || []);
+          setColors(product.colors || []);
+          setFinishes(product.finishes || []);
         }
       }, [product]);
 
@@ -242,7 +277,49 @@ const ProductEditScreen = () => {
             </li>
         ))}
     </ul>
-</div>  
+</div> 
+
+                    {/* Colors */}
+                    <div className="mb-5">
+                        <label className="block mb-2 text-sm text-gray-900" htmlFor="color">Color:</label>
+                        <input
+                            type="text"
+                            id="color"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                            value={color}
+                            onChange={(e) => setColor(e.target.value)}
+                        />
+                        <button type="button" className="mt-4 bg-primary text-white px-2 py-1" onClick={handleAddColor}>Add Color</button>
+                        <ul>
+                            {colors.map((col, index) => (
+                                <li key={index} className="mt-4">
+                                    {col}
+                                    <button type="button" className="ml-2 bg-black text-white px-2 py-1" onClick={() => handleRemoveColor(index)}>Remove</button>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Finishes */}
+                    <div className="mb-5">
+                        <label className="block mb-2 text-sm text-gray-900" htmlFor="finish">Finish:</label>
+                        <input
+                            type="text"
+                            id="finish"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                            value={finish}
+                            onChange={(e) => setFinish(e.target.value)}
+                        />
+                        <button type="button" className="mt-4 bg-primary text-white px-2 py-1" onClick={handleAddFinish}>Add Finish</button>
+                        <ul>
+                            {finishes.map((fin, index) => (
+                                <li key={index} className="mt-4">
+                                    {fin}
+                                    <button type="button" className="ml-2 bg-black text-white px-2 py-1" onClick={() => handleRemoveFinish(index)}>Remove</button>
+                                </li>
+                            ))}
+                        </ul>
+                        </div>
 
                 <button type="submit" className="text-white bg-black focus:outline-none rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Update</button>
  

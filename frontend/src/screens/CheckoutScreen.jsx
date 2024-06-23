@@ -61,6 +61,7 @@ const Checkout = () => {
 
             {item.selectedDimension && <p className="text-lg font-semibold">{item.selectedDimension.diameter}cm x {item.selectedDimension.height}h</p> }
             {item.selectedColor && <p className="text-lg font-semibold">{item.selectedColor}</p> }
+            {item.selectedFinish && <p className="text-lg font-semibold">{item.selectedFinish}</p> }
             
           </div>
         </div>

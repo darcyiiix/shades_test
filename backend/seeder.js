@@ -45,6 +45,7 @@ const destroyData = async () => {
         await Product.deleteMany();
         await Order.deleteMany();
         await Image.deleteMany(); // Delete existing images
+        
 
         console.log('Data Destroyed'.green.inverse);
         process.exit();

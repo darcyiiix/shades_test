@@ -106,7 +106,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='bg-primary p-2 w-full flex flex-wrap items-center justify-around'>
-                <div className="dropdown max-md:hidden">
+                <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn m-1 bg-transparent border-none text-white hover:bg-primary_dark px-4"><FaList /> categories</div>
                     <ul tabIndex={0} className="z-[500] dropdown-content z-[1] menu p-2 shadow-2xl text-black rounded-md w-52 bg-white">
                         {categories.map(category => (

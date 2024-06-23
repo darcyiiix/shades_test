@@ -91,6 +91,7 @@ const DetailsScreen = () => {
                       <span  className='font-semibold'><Link to={`/products/${item.product}`}>{item.name}</Link></span>
                       <p className="text-lg">{item.qty} x {item.price} = {(item.qty * item.price).toFixed(2)}</p>
                       { item.selectedDimension && <p className='text-lg'>{item.selectedDimension.diameter}cm x {item.selectedDimension.height}h</p>}
+                      { item.selectedFinish && <p className='text-lg'>{item.selectedFinish}</p>}
                     </div>
                   </div>
                   ))}

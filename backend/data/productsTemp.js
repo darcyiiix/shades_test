@@ -12,6 +12,7 @@ const products = [
         countInStock: 10,
         rating: 3.5,
         numReviews: 10,
+        finishes: ['matte', 'glossy', 'satin'], // Add finishes heres
 
         dimension: [
             {
@@ -41,7 +42,8 @@ const products = [
             },
      ],
 
-     colors: ['black', 'white', 'red'] 
+     colors: ['black', 'whitee', 'red'],
+     
     },
 
     {
@@ -95,6 +97,7 @@ const products = [
         countInStock: 15,
         rating: 4.5,
         numReviews: 11,
+        finishes: ['matte', 'glossy', 'satin'], // Add finishes heres
     },
 
     {

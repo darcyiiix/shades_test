@@ -122,6 +122,7 @@ const copyProduct = asyncHandler(async (req, res) => {
         description: existingProduct.description,
         dimension: existingProduct.dimension,
         colors: existingProduct.colors,
+        finishes: existingProduct.finishes,
     });
 
     const savedCopiedProduct = await copiedProduct.save();
@@ -134,7 +135,7 @@ const copyProduct = asyncHandler(async (req, res) => {
 // @access Private/Admin
 
 const updateProduct = asyncHandler (async (req, res) => {
-    const { name, price, description, image, brand, category, countInStock, dimension } = req.body;
+    const { name, price, description, image, brand, category, countInStock, dimension, colors, finishes } = req.body;
 
     const product = await Product.findById(req.params.id);
 
@@ -147,6 +148,8 @@ const updateProduct = asyncHandler (async (req, res) => {
         product.category = category;
         product.countInStock = countInStock;
         product.dimension = dimension;
+        product.colors = colors;
+        product.finishes = finishes;
 
         const updatedProduct = await product.save();
         res.json(updatedProduct);
