@@ -14,7 +14,7 @@ const Category = () => {
                             <img
                             alt="gallery"
                             className="block h-full w-full object-cover object-center"
-                            src="images/categories/cat_03.jpeg" />
+                            src="images/categories/rec_image_1.jpeg" />
                             <div className="absolute bottom-0 left-0 right-0 top-0 w-full h-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
                             <p className="absolute bottom-1 left-2 text-white">mirrors</p>
                         </a>
@@ -24,7 +24,7 @@ const Category = () => {
                         <img
                         alt="gallery"
                         className="block h-full w-full object-cover object-center"
-                        src="images/categories/cat_06.jpeg" />
+                        src="images/categories/rec_image_2.jpeg" />
                         <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
                         <p className="absolute bottom-1 left-2 text-white">pendant lights</p>
 
@@ -36,7 +36,7 @@ const Category = () => {
                         <img
                         alt="gallery"
                         className="block h-full w-full object-cover object-center"
-                        src="/images/categories/cat_01.jpeg" />
+                        src="/images/categories/rec_image_3.jpeg" />
                         <div className="absolute bottom-0 left-0 right-0 top-0 w-full h-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
                         <p className="absolute bottom-1 left-2 text-white">rechargeable table lamps</p>
 
@@ -50,7 +50,7 @@ const Category = () => {
                         <img
                         alt="gallery"
                         className="block h-full w-full object-cover object-center"
-                        src="images/categories/cat_04.jpeg" />
+                        src="images/categories/rec_image_4.jpeg" />
                         <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
                         <p className="absolute bottom-1 left-2 text-white">lamp shades</p>
 
@@ -62,7 +62,7 @@ const Category = () => {
                         <img
                         alt="gallery"
                         className="block h-full w-full object-cover object-center"
-                        src="images/categories/cat_02.jpeg" />
+                        src="images/categories/rec_image_5.jpeg" />
                         <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
                         <p className="absolute bottom-1 left-2 text-white">sockets and switches</p>
 
@@ -74,7 +74,7 @@ const Category = () => {
                         <img
                         alt="gallery"
                         className="block h-full w-full object-cover object-center"
-                        src="images/categories/cat_05.jpeg" />
+                        src="images/categories/rec_image_6.jpeg" />
                         <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
                         <p className="absolute bottom-1 left-2 text-white">outdoor lights</p>
 

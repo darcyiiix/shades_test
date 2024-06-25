@@ -12,7 +12,7 @@ const AboutUS = () => {
             </div>   
 
             <div>
-                <img src="/images/p5.jpeg" />
+                <img src="/images/rec_image_2.jpeg" />
             </div>
 
         </div>

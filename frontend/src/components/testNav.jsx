@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Logo from '../public/images/logo.png';
+import Logo from '../public/images/logo_new.jpeg';
 import { FaShoppingCart, FaHeart, FaUser, FaTruck, FaList } from 'react-icons/fa';
 import { Badge } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';

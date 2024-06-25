@@ -1,4 +1,4 @@
-import Image from '../../public/images/p6.jpeg'
+import Image from '../../public/images/categories/rec_image_4.jpeg'
 import { useEffect } from 'react';
 const ContactUS = () => {
 

@@ -1,141 +1,3 @@
-// import React, { useState } from 'react';
-// import { useNavigate, Link } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { FaTrash } from 'react-icons/fa';
-// import Message from '../components/Message';
-// // import { Row } from 'react-bootstrap';
-// import { addToCart } from '../slices/cartSlice'; 
-
-// const ShippingScreen = () => {
-//   const navigate = useNavigate();
-//   const dispatch = useDispatch();
-//   const cart = useSelector((state) => state.cart);
-//   const { cartItems } = cart;
-//   console.log(cartItems)
-
-//   const [quantities, setQuantities] = useState({}); // State to hold quantities for each item
-
-//   // Function to handle quantity change for a specific item
-//   const handleQuantityChange = (itemId, newQuantity) => {
-//     setQuantities((prevQuantities) => ({
-//       ...prevQuantities,
-//       [itemId]: newQuantity,
-//     }));
-//   };
-
-//   const decrementQuantity = (itemId) => {
-//     const currentQuantity = quantities[itemId] || 1; // Default to 1 if quantity is not set
-//     if (currentQuantity > 1) {
-//       handleQuantityChange(itemId, currentQuantity - 1);
-//     }
-//   };
-
-//   const incrementQuantity = (itemId, countInStock) => {
-//     const currentQuantity = quantities[itemId] || 0; // Default to 0 if quantity is not set
-//     if (currentQuantity < countInStock) {
-//       handleQuantityChange(itemId, currentQuantity + 1);
-//     }
-//   };
-
-//   // Calculate the total price including taxes
-//   const totalPriceWithTax = cartItems.reduce((acc, item) => {
-//     return acc + (item.price * (quantities[item._id] || 1));
-//   }, 0) + Number(cart.shippingTax);
-
-//   const addToCartHandler = () => {
-//     console.log('addtocart')
-//   }
-
-//   const proceedToCheckoutHandler = () => {
-//     navigate('/login?redirect=/checkout');
-//   }
-
-//   return (
-//     <div className='p-8 items-center' >
-//       {/* <Row> */}
-//         <h1 className="text-3xl text-center mb-8 font-light">your basket</h1>
-//       <div className='text-2xl'>
-
-//         {cartItems.map((item) => (
-//           <div key={item._id} className="px-8 mb-4">
-//             <div className="container mx-auto px-4">
-//               <div className="flex flex-col justify-center md:flex-row gap-4">
-//                 <div className="md:w-3/4">
-//                   <div className="bg-white rounded-lg border-b p-6 mb-4">
-//                     <table className="w-full">
-//                       <thead>
-//                         {/* <tr className='mb-2'>
-//                           <th className="text-left font-normal">product</th>
-//                           <th className="text-left font-normal">price</th>
-//                           <th className="text-left font-normal">quantity</th>
-//                           <th className="text-left font-normal">total </th>
-//                           <th className="text-left "></th>
-//                         </tr> */}
-//                       </thead>
-//                       <tbody>
-//                         <tr>
-//                           <td className="py-4">
-//                             <Link to={`/product/${item._id}`}>
-//                               <div className="flex items-center">
-//                                 <img className="h-16 w-16 mr-4" src={item.image[0]} alt={item.name} />
-//                                 <span className="">{item.name}</span>
-//                               </div>
-//                             </Link>
-//                           </td>
-//                           <td className="py-4 text-red-500">${item.price.toFixed(2)}</td>
-//                           <td className="py-4">
-//                             <div className="flex items-center">
-//                               <button className="border rounded-md py-2 px-4 mr-2" onClick={() => decrementQuantity(item._id)} onChange={(e) => addToCartHandler(item._id, Number(e.target.value))}>−</button>
-//                               <span className="text-center w-8">{quantities[item._id] || 1}</span>
-//                               <button className="border rounded-md py-2 px-4 ml-2" onClick={() => incrementQuantity(item._id, item.countInStock)}>+</button>
-//                             </div>
-//                           </td>
-//                           <td className="py-4 text-red-500">${(item.price * (quantities[item._id] || 1)).toFixed(2)} <a className='block underline text-[12px] text-red-700' href='#'>Remove</a></td>
-//                         </tr>
-//                         {/* More product rows */}
-//                       </tbody>
-//                     </table>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-            
-//           </div>
-          
-//         ))}
-
-//       </div>
-
-//       {/* </Row> */}
-//       <div className="md:w-1/4 mb-4">
-//         <div className="bg-white rounded-lg shadow-md p-6">
-//           <h2 className="text-lg font-semibold mb-4">Summary</h2>
-//           <div className="flex justify-between mb-2">
-//             <span>Subtotal</span>
-//             <span>{cartItems.reduce((acc, item) => acc + item.qty, 0)} Items</span>
-//           </div>
-//           <div className="flex justify-between mb-2">
-//             <span>Taxes</span>
-//             <span>${cart.shippingTax}</span>
-//           </div>
-//           <div className="flex justify-between mb-2">
-//             <span>Shipping</span>
-//             <span>${cart.shippingPrice}</span>
-//           </div>
-//           <hr className="my-2" />
-//           <div className="flex justify-between mb-2">
-//             <span className="font-semibold">Total</span>
-//             <span className="font-semibold">${totalPriceWithTax}</span>
-//           </div>
-//           <button onClick={proceedToCheckoutHandler}className="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4 w-full">Checkout</button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ShippingScreen;
-
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -166,20 +28,6 @@ const ShippingScreen = () => {
 
   };
 
-  const decrementQuantity = (itemId) => {
-    const currentQuantity = quantities[itemId] || 1;
-    // Default to 1 if quantity is not set
-    if (currentQuantity > 1) {
-      handleQuantityChange(itemId, currentQuantity - 1);
-    }
-  };
-
-  const incrementQuantity = (itemId, countInStock) => {
-    const currentQuantity = quantities[itemId] || 0; // Default to 0 if quantity is not set
-    if (currentQuantity < countInStock) {
-      handleQuantityChange(itemId, currentQuantity + 1);
-    }
-  };
 
   // Calculate the total price including taxes
   const totalPriceWithTax = cartItems.reduce((acc, item) => {
@@ -198,7 +46,7 @@ const ShippingScreen = () => {
   }
 
   const proceedToCheckoutHandler = () => {
-    navigate('/login?redirect=/checkout');
+    navigate('/checkout');
   }
 
   return (

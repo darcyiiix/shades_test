@@ -32,7 +32,7 @@ const Footer = () => {
                             <p className="font-semibold text-gray-800">Let us help you</p>
 
                             <div className="flex flex-col items-start mt-5 space-y-2 text-primary_text">
-                                <Link to='/pages/frequently-asked-que     .xxx  stions'><a className="transition-colors duration-300 hover:cursor-pointer hover:text-primary_dark">help & faqs</a></Link>
+                                <Link to='/pages/frequently-asked-questions'><a className="transition-colors duration-300 hover:cursor-pointer hover:text-primary_dark">help & faqs</a></Link>
                                 <p className="transition-colors duration-300 hover:cursor-pointer hover:text-primary_dark">terms and conditions</p>
                                 <p className="transition-colors duration-300 hover:cursor-pointer hover:text-primary_dark">delivery and returns</p>
                             </div>
@@ -51,7 +51,7 @@ const Footer = () => {
 
                         </div>
                     </div>
-                    <p className="font-sans p-8 text-start md:text-center md:text-lg md:p-4">© 2023 Pookie Inc. All rights reserved.</p>
+                    <p className="font-sans p-8 text-start md:text-center md:text-lg md:p-4">© 2024 Shades by Woodpecker Inc. All rights reserved.</p>
                 </div>
             </footer>
         

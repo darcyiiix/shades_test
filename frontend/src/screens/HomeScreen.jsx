@@ -18,9 +18,9 @@ const HomeScreen = () => {
     // const { wishlistItems } = useSelector((state) => state.wishlistItems);
 
     let slides = [
-        "/images/c1.jpeg",
-        "/images/c2.jpeg",
-        "/images/c3.jpeg",
+        "/images/banners/new_banner_1.jpeg",
+        "/images/banners/new_banner_2.jpeg",
+        "/images/banners/new_banner_3.jpeg",
 
       ];
 
@@ -69,20 +69,20 @@ const HomeScreen = () => {
                 <div className="grid grid-cols-3 gap-4 max-md:grid-cols-1 text-center">
                         
                     <div className="max-md:mb-6">
-                        <img className="w-full" src="images/about/pooky01.jpeg" />
+                        <img className="w-full h-2/4" src="images/about/about_2.jpeg" />
                         <h2 className="my-3 font-bold w-full">What is Lorem Ipsum?</h2>
                         <p className="mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         <a href="#" className="underline text-primary text-sm">read our story</a>
                     </div>
 
                     <div className="max-md:mb-6">
-                        <img className="w-full" src="/images/about/pooky02.jpeg" />   
+                        <img className="w-full h-2/4" src="/images/about/about_1.jpeg" />   
                         <h2 className="my-3 font-bold w-full">Why do we use it?</h2>
                         <p className="mb-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                     </div>
 
                     <div className="max-md:mb-6">
-                        <img className="w-full" src="images/about/pooky03.jpeg" />
+                        <img className="w-full h-2/4" src="images/about/about_3.jpeg" />
                         <h2 className="my-3 font-bold w-full">Where does it come from?</h2>
                         <p className="mb-2">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                     </div>
