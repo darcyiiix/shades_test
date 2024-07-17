@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Products from '../components/Product';
 import { useGetProductsQuery } from '../slices/productsApiSlice';
 import Loader from '../components/Loader';
@@ -19,17 +19,7 @@ const ViewAllProductsScreen = () => {
         }
     }, [productsData]);
 
-    useEffect(() => {
-        if (products.length > 0) {
-            sortProducts(sortType);
-        }
-    }, [sortType, products]);
-
-    const handleSortChange = (e) => {
-        setSortType(e.target.value);
-    };
-
-    const sortProducts = (type) => {
+    const sortProducts = useCallback((type) => {
         const sortedProducts = [...products];
         if (type === 'lowToHigh') {
             sortedProducts.sort((a, b) => a.price - b.price);
@@ -39,6 +29,16 @@ const ViewAllProductsScreen = () => {
             sortedProducts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         }
         setProducts(sortedProducts);
+    }, [products]);
+
+    useEffect(() => {
+        if (products.length > 0) {
+            sortProducts(sortType);
+        }
+    }, [sortType, products, sortProducts]);
+
+    const handleSortChange = (e) => {
+        setSortType(e.target.value);
     };
 
     const showMoreItems = () => {
