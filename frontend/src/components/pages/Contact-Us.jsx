@@ -16,7 +16,7 @@ const ContactUS = () => {
                 <h2 className="mb-4 text-2xl text-black">Contact Us</h2>
                 <p className="mb-8 lg:mb-16 text-black sm:text-sm">
                     If you’ve got any questions or if there’s something you’re just dying to tell us, we’d love to hear from you. Fill in the form below to send a note to our team and we’ll get straight back to you or if you have an image you want
-                    to share with us you can email us directly on hello@pooky.com
+                    to share with us you can email us directly on rubab@shadesbywoodpecker.co.uk
                 </p>
                 <form action="#" className="space-y-8">
                     <div>
@@ -39,8 +39,8 @@ const ContactUS = () => {
         <div className="text-sm">
             <img className="mb-8 mt-8" src={Image} /> 
             <div className="w-4/6">
-                <p className="mb-4"> give us bell 012 3456 7890</p>
-                <p className="mb-4"> send us email hello@pooky.com</p>
+                <p className="mb-4"> give us bell 00447889451166</p>
+                <p className="mb-4"> send us email @ rubab@shadesbywoodpecker.co.uk</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde error inventore magni facere odio sit recusandae officia ea placeat asperiores voluptates.</p>
             </div>
         </div>

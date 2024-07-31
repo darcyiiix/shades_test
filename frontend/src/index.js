@@ -40,6 +40,7 @@ import UserListScreen from './screens/Admin/UserListScreen.jsx';
 import UserEditScreen from './screens/Admin/UserEditScreen.jsx';
 import CategoryScreen from './screens/CategoryScreen.jsx';
 import WishlistScreen from './screens/WishlistScreen.jsx';
+import job from 'cron.js'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -92,6 +93,8 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+
+job.start();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
