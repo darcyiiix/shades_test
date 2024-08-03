@@ -15,6 +15,8 @@ const ProductDetail = () => {
 
     const { data: product, isLoading, refetch, error } = useGetProductDetailsQuery(productId);
     const [ createReview, { isLoading: loadingProductReview, error: reviewError }] = useCreateReviewMutation();
+
+    console.log(product)
     
     const dispatch = useDispatch();
     const navigate = useNavigate();

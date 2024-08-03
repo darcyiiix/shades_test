@@ -9,6 +9,7 @@ const ViewAllProductsScreen = () => {
     const { keyword } = useParams();
     const { data: productsData, isLoading, error } = useGetProductsQuery({ keyword });
     const [products, setProducts] = useState([]);
+    const [sortedProducts, setSortedProducts] = useState([]);
     const [sortType, setSortType] = useState('recent');
     const [visible, setVisible] = useState(4);
     const [btnDisabled, setBtnDisabled] = useState(false);
@@ -19,32 +20,33 @@ const ViewAllProductsScreen = () => {
         }
     }, [productsData]);
 
-    const sortProducts = useCallback((type) => {
-        const sortedProducts = [...products];
+    const sortProducts = useCallback((products, type) => {
+        const sorted = [...products];
         if (type === 'lowToHigh') {
-            sortedProducts.sort((a, b) => a.price - b.price);
+            sorted.sort((a, b) => a.price - b.price);
         } else if (type === 'highToLow') {
-            sortedProducts.sort((a, b) => b.price - a.price);
+            sorted.sort((a, b) => b.price - a.price);
         } else if (type === 'recent') {
-            sortedProducts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            sorted.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         }
-        setProducts(sortedProducts);
-    }, [products]);
+        return sorted;
+    }, []);
 
     useEffect(() => {
         if (products.length > 0) {
-            sortProducts(sortType);
+            const sorted = sortProducts(products, sortType);
+            setSortedProducts(sorted);
         }
-    }, [sortType, products, sortProducts]);
+    }, [products, sortType, sortProducts]);
 
     const handleSortChange = (e) => {
         setSortType(e.target.value);
     };
 
     const showMoreItems = () => {
-        const numItems = Math.min(visible + 4, products.length);
+        const numItems = Math.min(visible + 4, sortedProducts.length);
         setVisible(numItems);
-        if (numItems === products.length) {
+        if (numItems === sortedProducts.length) {
             setBtnDisabled(true);
         }
     };
@@ -68,7 +70,7 @@ const ViewAllProductsScreen = () => {
                             </select>
                         </div>
                         <div className="grid grid-cols-4 gap-4 max-[900px]:grid-cols-2">
-                            {products.slice(0, visible).map((product) => (
+                            {sortedProducts.slice(0, visible).map((product) => (
                                 <div key={product._id}>
                                     <Products product={product} />
                                 </div>
@@ -76,7 +78,7 @@ const ViewAllProductsScreen = () => {
                         </div>
                     </div>
                     <div className='text-center'>
-                        <p className='my-4'>You've seen {visible} out of {products.length} products</p>
+                        <p className='my-4'>You've seen {visible} out of {sortedProducts.length} products</p>
                         <button onClick={showMoreItems} disabled={btnDisabled} className={`text-white py-2 px-8 ${btnDisabled ? 'bg-gray-300' :'bg-primary'}`}>
                             Load more
                         </button>

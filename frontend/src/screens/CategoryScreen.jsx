@@ -28,7 +28,7 @@ const CategoryScreen = () => {
         if (products.length > 0) {
             sortProducts(sortType);
         }
-    }, [sortType, products]);
+    }, []);
 
     const handleSortChange = (e) => {
         setSortType(e.target.value);
