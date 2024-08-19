@@ -18,9 +18,9 @@ const HomeScreen = () => {
     // const { wishlistItems } = useSelector((state) => state.wishlistItems);
 
     let slides = [
-        "/images/banners/new_banner_1.jpeg",
-        "/images/banners/new_banner_2.jpeg",
-        "/images/banners/new_banner_3.jpeg",
+        "/images/banners/banner-1.svg",
+        "/images/banners/banner-2.svg",
+        "/images/banners/banner-3.svg",
 
       ];
 
@@ -70,21 +70,21 @@ const HomeScreen = () => {
                         
                     <div className="max-md:mb-6">
                         <img className="w-full h-2/4" src="images/about/about_2.jpeg" />
-                        <h2 className="my-3 font-bold w-full">What is Lorem Ipsum?</h2>
-                        <p className="mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h2 className="my-3 font-bold w-full">Boutique Lampshades</h2>
+                        <p className="mb-2"> Made by Hand with Luxury Fabrics</p>
                         <a href="#" className="underline text-primary text-sm">read our story</a>
                     </div>
 
                     <div className="max-md:mb-6">
                         <img className="w-full h-2/4" src="/images/about/about_1.jpeg" />   
                         <h2 className="my-3 font-bold w-full">Why do we use it?</h2>
-                        <p className="mb-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <p className="mb-2"> Shades By Woodpecker creates high quality lampshades, by hand.  Each lamp shade is made by a member of our professional team, using luxurious fabrics sourced from the UK.</p>
                     </div>
 
                     <div className="max-md:mb-6">
                         <img className="w-full h-2/4" src="images/about/about_3.jpeg" />
                         <h2 className="my-3 font-bold w-full">Where does it come from?</h2>
-                        <p className="mb-2">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                        <p className="mb-2">Our techniques used will ensure your product is finished to a high standard and of superior quality to the mass produced offering of large retailers</p>
                     </div>
 
                 </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Logo from '../public/images/logo_new.jpeg';
-import { FaShoppingCart, FaHeart, FaUser, FaTruck, FaList } from 'react-icons/fa';
+import Logo from '../public/images/logo-png.png';
+import { FaShoppingCart, FaHeart, FaUser, FaTruck, FaList, FaPhoneAlt} from 'react-icons/fa';
 import { Badge } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLogoutMutation } from '../slices/usersApiSlice';
@@ -49,7 +49,7 @@ const Navbar = () => {
         <nav className="bg-primary_grey sticky top-0 z-[1000]">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link to='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
-                    <img src={Logo} className="h-16" alt="Logo" />
+                    <img src={Logo} className="h-20" alt="Logo" />
                 </Link>
 
                 <button onClick={() => setMenuOpen(!menuOpen)} data-collapse-toggle="navbar-dropdown" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-md md:hidden focus:outline-none text-primary" aria-controls="navbar-dropdown" aria-expanded={menuOpen}>
@@ -119,7 +119,7 @@ const Navbar = () => {
                 <div className="relative w-4/12 max-md:w-4/6">
                     <SearchBar />
                 </div>
-                <p className='flex items-center inline text-white max-md:hidden'><FaTruck className='mr-1' /> Free delivery for orders over $20</p>
+                <p className='flex items-center inline text-white max-md:hidden'><FaPhoneAlt className='mr-1' /> 00447889451166</p>
             </div>
         </nav>
     );

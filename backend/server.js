@@ -7,6 +7,7 @@ import userRoutes from './routes/userRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
 import imageRoutes from './routes/imageRoutes.js';
+import cors from 'cors'
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
+app.use(cors('*'))
 
 
 
