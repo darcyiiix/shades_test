@@ -18,9 +18,9 @@ const HomeScreen = () => {
     // const { wishlistItems } = useSelector((state) => state.wishlistItems);
 
     let slides = [
-        "/images/banners/banner-1.svg",
         "/images/banners/banner-2.svg",
         "/images/banners/banner-3.svg",
+        "/images/banners/banner-1.svg",
 
       ];
 
