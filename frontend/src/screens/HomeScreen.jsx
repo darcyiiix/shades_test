@@ -70,15 +70,15 @@ const HomeScreen = () => {
                         
                     <div className="max-md:mb-6">
                         <img className="w-full h-2/4" src="images/about/about_2.jpeg" />
-                        <h2 className="my-3 font-bold w-full">Boutique Lampshades</h2>
-                        <p className="mb-2"> Made by Hand with Luxury Fabrics</p>
-                        <a href="#" className="underline text-primary text-sm">read our story</a>
+                        <h2 className="my-3 font-bold w-full">What is it about shades by woodpecker</h2>
+                        <p className="mb-2">"Shades by Woodpecker" is a UK-based company crafting handmade lampshades with a 2-3 week lead time. Their passion for lighting and strong client relationships inspire unique, high-quality designs for UK and EU markets.</p>
+                        
                     </div>
 
                     <div className="max-md:mb-6">
                         <img className="w-full h-2/4" src="/images/about/about_1.jpeg" />   
                         <h2 className="my-3 font-bold w-full">Why do we use it?</h2>
-                        <p className="mb-2"> Shades By Woodpecker creates high quality lampshades, by hand.  Each lamp shade is made by a member of our professional team, using luxurious fabrics sourced from the UK.</p>
+                        <p className="mb-2">Shades By Woodpecker creates high quality lampshades, by hand.  Each lamp shade is made by a member of our professional team, using luxurious fabrics sourced from the UK.</p>
                     </div>
 
                     <div className="max-md:mb-6">

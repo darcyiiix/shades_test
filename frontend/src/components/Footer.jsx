@@ -33,8 +33,8 @@ const Footer = () => {
 
                             <div className="flex flex-col items-start mt-5 space-y-2 text-primary_text">
                                 <Link to='/pages/frequently-asked-questions'><a className="transition-colors duration-300 hover:cursor-pointer hover:text-primary_dark">help & faqs</a></Link>
-                                <p className="transition-colors duration-300 hover:cursor-pointer hover:text-primary_dark">terms and conditions</p>
-                                <p className="transition-colors duration-300 hover:cursor-pointer hover:text-primary_dark">delivery and returns</p>
+                                <Link to='/pages/terms-and-conditions'><p className="transition-colors duration-300 hover:cursor-pointer hover:text-primary_dark">terms and conditions</p></Link>
+                                <Link to=''><p className="transition-colors duration-300 hover:cursor-pointer hover:text-primary_dark">delivery and returns</p></Link>
                             </div>
                         </div>
                     </div>

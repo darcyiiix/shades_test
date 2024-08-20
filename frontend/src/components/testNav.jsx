@@ -119,7 +119,7 @@ const Navbar = () => {
                 <div className="relative w-4/12 max-md:w-4/6">
                     <SearchBar />
                 </div>
-                <p className='flex items-center inline text-white max-md:hidden'><FaPhoneAlt className='mr-1' /> 00447889451166</p>
+                <p className='flex items-center inline text-white max-md:hidden'>call us: 00447889451166</p>
             </div>
         </nav>
     );

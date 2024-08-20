@@ -37,11 +37,10 @@ const ContactUS = () => {
         </div>
 
         <div className="text-sm">
-            <img className="mb-8 mt-8" src={Image} /> 
+            <img className="mb-8 mt-8 h-3/5 w-4/5" src={Image} /> 
             <div className="w-4/6">
-                <p className="mb-4"> give us bell 00447889451166</p>
-                <p className="mb-4"> send us email @ rubab@shadesbywoodpecker.co.uk</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde error inventore magni facere odio sit recusandae officia ea placeat asperiores voluptates.</p>
+                <p className="mb-4"> give us bel: 00447889451166</p>
+                <p className="mb-4"> send us email @ rubab@shadesbywoodpecker.co.uk</p> 
             </div>
         </div>
 

@@ -28,6 +28,7 @@ import ProfileScreen from './screens/ProfileScreen.jsx';
 import FAQ from './components/pages/FAQ.jsx';
 import AboutUs from './components/pages/About-Us';
 import ContactUs from './components/pages/Contact-Us.jsx';
+import Terms from './components/pages/Terms.jsx';
 import ViewAllProductsScreen from './screens/ViewAllProductsScreen.jsx';
 
 // Admin Screens
@@ -57,7 +58,7 @@ const router = createBrowserRouter(
       <Route path="/pages/contact-us" element={<ContactUs />}/>
       <Route path="/pages/about-us" element={<AboutUs />}/>
       <Route path="/pages/frequently-asked-questions" element={< FAQ/>}/>
-
+      <Route path="/pages/terms-and-conditions" element={< Terms />} />
 
       <Route path='' element={<PrivateRoute />}>
         <Route path="/shipping" element={<ShippingScreen />}/>
