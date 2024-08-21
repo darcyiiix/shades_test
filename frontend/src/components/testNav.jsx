@@ -116,7 +116,7 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="relative w-4/12 max-md:w-4/6">
+                <div className="relative w-4/12 max-md:w-4/6 pb-6">
                     <SearchBar />
                 </div>
                 <p className='flex items-center inline text-white max-md:hidden'>call us: 00447889451166</p>

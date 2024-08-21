@@ -40,11 +40,11 @@ const HomeScreen = () => {
 
             <Category />
 
-            <div className="product_reccomendation px-24 py-14 max-sm:pb-10 max-md:p-2 max-[1100px]:px-8 max-[460px]:hidden">
+            <div className="product_reccomendation px-24 py-14 max-sm:pb-10 max-md:p-2 max-[1100px]:px-8">
 
                 <h2 className="text-center text-2xl max-sm:text-lg uppercase mb-14 max-sm:mb-10">Recommendations</h2>
 
-                <div className="grid grid-cols-4 gap-4 max-[900px]:grid-cols-2">
+                <div className="grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[460px]:grid-cols-1">
     
                     {
                         products.products.slice(0,4).map((product) =>
@@ -68,20 +68,20 @@ const HomeScreen = () => {
 
                 <div className="grid grid-cols-3 gap-4 max-md:grid-cols-1 text-center">
                         
-                    <div className="max-md:mb-6">
+                    <div className="max-md:mb-2">
                         <img className="w-full h-2/4" src="images/about/about_2.jpeg" />
                         <h2 className="my-3 font-bold w-full">What is it about shades by woodpecker</h2>
                         <p className="mb-2">"Shades by Woodpecker" is a UK-based company crafting handmade lampshades with a 2-3 week lead time. Their passion for lighting and strong client relationships inspire unique, high-quality designs for UK and EU markets.</p>
                         
                     </div>
 
-                    <div className="max-md:mb-6">
+                    <div className="max-md:mb-2">
                         <img className="w-full h-2/4" src="/images/about/about_1.jpeg" />   
                         <h2 className="my-3 font-bold w-full">Why do we use it?</h2>
                         <p className="mb-2">Shades By Woodpecker creates high quality lampshades, by hand.  Each lamp shade is made by a member of our professional team, using luxurious fabrics sourced from the UK.</p>
                     </div>
 
-                    <div className="max-md:mb-6">
+                    <div className="max-md:mb-2">
                         <img className="w-full h-2/4" src="images/about/about_3.jpeg" />
                         <h2 className="my-3 font-bold w-full">Where does it come from?</h2>
                         <p className="mb-2">Our techniques used will ensure your product is finished to a high standard and of superior quality to the mass produced offering of large retailers</p>

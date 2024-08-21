@@ -61,7 +61,7 @@ const CategoryScreen = () => {
             ) : (
                 <>
                     <div className='p-8 border-b'>
-                        <h2 className="text-3xl font-light">{category ? category.charAt(0).toUpperCase() + category.slice(1) : 'Products'}</h2>
+                        <h2 className="text-3xl font-light mb-12">{category ? category.charAt(0).toUpperCase() + category.slice(1) : 'Products'}</h2>
                         <div className="flex justify-end mb-4">
                             <label htmlFor="sortBy" className="mr-2 font-semibold">Sort:</label>
                             <select id="sortBy" className='bg-transparent border-none cursor-pointer focus:ring-transparent p-0' onChange={handleSortChange} value={sortType}>
@@ -70,7 +70,7 @@ const CategoryScreen = () => {
                                 <option value="highToLow">Highest Price</option>
                             </select>
                         </div>
-                        <div className="grid grid-cols-4 gap-4 max-[900px]:grid-cols-2">
+                        <div className="grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[460px]:grid-cols-1">
                             {products.slice(0, visible).map((product) => (
                                 <div key={product._id}>
                                     <Products product={product} />

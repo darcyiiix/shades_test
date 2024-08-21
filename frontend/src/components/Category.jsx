@@ -19,7 +19,7 @@ const Category = () => {
                                     effect="blur"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 top-0 w-full h-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
-                                <p className="absolute bottom-1 left-2 text-white">mirrors</p>
+                        
                             </a>
                         </div>
                         <div className="w-1/2 p-1 md:p-2">
@@ -31,7 +31,7 @@ const Category = () => {
                                     effect="blur"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
-                                <p className="absolute bottom-1 left-2 text-white">pendant lights</p>
+                                
                             </a>
                         </div>
                         <div className="w-full p-1 md:p-2">
@@ -43,7 +43,7 @@ const Category = () => {
                                     effect="blur"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 top-0 w-full h-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
-                                <p className="absolute bottom-1 left-2 text-white">rechargeable table lamps</p>
+                                
                             </a>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ const Category = () => {
                                     effect="blur"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
-                                <p className="absolute bottom-1 left-2 text-white">sockets and switches</p>
+                                
                             </a>
                         </div>
                         <div className="w-1/2 p-1 md:p-2">
@@ -82,7 +82,7 @@ const Category = () => {
                                     effect="blur"
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full bg-black bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-50"></div>
-                                <p className="absolute bottom-1 left-2 text-white">outdoor lights</p>
+                               
                             </a>
                         </div>
                     </div>

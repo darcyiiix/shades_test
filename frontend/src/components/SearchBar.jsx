@@ -24,15 +24,22 @@ const SearchBar = () => {
 
   return (
     <>
+        <div className="relative w-full">
         <input
-        type="text"
-        className="w-full flex-auto rounded-full border border-1 border-solid border-white text-white bg-transparent bg-clip-padding pl-10 pr-1 py-[0.25rem] placeholder:text-white placeholder:opacity-50 focus:outline-none focus:ring-0 focus:border-white"
-        id="exampleSearch"
-        placeholder="Search"
-        value={keyword}
-        onChange={(e) => setKeyword(e.target.value)}/>
-
-        <button onClick={submitHandler} className='absolute left-3 top-1/2 transform -translate-y-1/2'> <FaSearch className='text-white' /> </button>
+            type="text"
+            className="w-full flex-auto rounded-full border border-1 border-solid border-white text-white bg-transparent bg-clip-padding pl-10 pr-4 py-[0.25rem] placeholder:text-white placeholder:opacity-50 focus:outline-none focus:ring-0 focus:border-white"
+            id="exampleSearch"
+            placeholder="Search"
+            value={keyword}
+            onChange={(e) => setKeyword(e.target.value)}
+        />
+        <button
+            onClick={submitHandler}
+            className="absolute left-3 top-1/2 transform -translate-y-1/2"
+        >
+            <FaSearch className="text-white" />
+        </button>
+        </div>
     </>
   )
 }
